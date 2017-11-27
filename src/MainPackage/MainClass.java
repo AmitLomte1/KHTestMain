@@ -25,8 +25,14 @@ public class MainClass {
 	    		String Region_Code[] = { "UK", "England", "Wales", "Scotland" };
 		        String Weather_Param[] = { "Tmax", "Tmin", "Tmean", "Sunshine", "Rainfall" };
 				
+		        
+		        try {
+		        	writer = new PrintWriter("E:/Download/Output.csv", "UTF-8");		
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
 		       
-				writer = new PrintWriter("C:/Download/Output.csv", "UTF-8");
+			
 
 				//Region_Code.length
 				
@@ -119,7 +125,7 @@ public class MainClass {
 
 			  String FileName = Region_Code + "_" + Weather_Param;
 		
-			  File file = new File("C:/JavaProgram/CSV/DownloadedFiles/"+FileName+".txt");
+			  File file = new File("E:/Download/"+FileName+".txt");
 		      StringBuffer str = new StringBuffer();
 		      BufferedReader br = null;
 
